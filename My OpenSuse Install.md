@@ -101,11 +101,24 @@ usermod -a -G docker <my-username>
 - [top](https://github.com/ClementTsang/bottom)  `sudo zypper in bottom`
 - [cat](https://github.com/sharkdp/bat)  `sudo zypper in bat` 
 
-
-- Add to bash aliases `vi ~/.alias`
+Add to bash aliases `vi ~/.alias`
 ```
 alias find='fd'
 
+```
+
+# Add Python Alternatives
+```bash
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 2
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.11 3
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.12 4
+sudo update-alternatives --config python
+```
+
+# Add JAVA Alternatives
+```bash
+sudo update-alternatives --install 
+sudo update-alternatives --config java
 ```
 
 
