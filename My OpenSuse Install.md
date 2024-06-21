@@ -18,7 +18,7 @@ alias cls='clear'
 Add to .bashrc
 ```bash
 export HISTCONTROL=ignoreboth:erasedups
-export HISTIGNORE='clear':'ls *':'ll *':'history*':'exit':'reboot':'zypper*'
+export HISTIGNORE='clear':'ls *':'ll*':'history*':'exit':'reboot':'zypper*':'..':'cd ~'
 ```
 
 
@@ -46,11 +46,13 @@ git config --global user.email 'carlos@decumont.be'
 ```
 
 ## Start and Customize Samba
+As I use samba to share folders between all Windows VMs, I need to add all the windows users ...
 ```bash
 smbpasswd -a cdc 
 ```
 
 ## Customize FirewallD
+Just using the default install !
 ```bash
 firewall-cmd --get-zones
 ```
@@ -58,7 +60,10 @@ firewall-cmd --get-zones
 
 # KVM/QEMU Install
 - Install with `yast` ! Bridge br0 will be added.
-  Something buggy with KNetWorkManager so use Wicker
+  Sometime it can be buggy with KNetWorkManager so use Wicker
+```bash
+usermod -a -G libvirt <my-username>
+```
 - Use default virtual network `192.168.122.x`
 - Adjust Firewall to access local Samba Server
 ```bash
