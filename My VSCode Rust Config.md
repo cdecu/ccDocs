@@ -43,3 +43,10 @@ cargo watch -q -c -w src/ -x 'run -q'
 > watch [Copilot Best Practices](https://www.youtube.com/watch?v=2q0BoioYSxQ&t=90s)
 
 
+# To Read
+- https://docs.rs/specta/latest/specta/
+- https://github.com/1Password/typeshare
+- https://github.com/Aleph-Alpha/ts-rs
+
+
+
