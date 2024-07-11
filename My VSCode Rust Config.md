@@ -47,6 +47,9 @@ cargo watch -q -c -w src/ -x 'run -q'
 - https://docs.rs/specta/latest/specta/
 - https://github.com/1Password/typeshare
 - https://github.com/Aleph-Alpha/ts-rs
+- https://youtu.be/BU1LYFkpJuk?si=hNgSRlxxGFGzCFHu
+
+
 
 
 
