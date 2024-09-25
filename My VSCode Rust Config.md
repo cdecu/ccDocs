@@ -4,7 +4,8 @@
 - Even Better TOML
 - Error Lens
 - Todo Tree  (add todo! macro to the regex)
-- crates
+- Dependi (replace crates)
+- Tabnine (to try)
 
 # VSCode Settings
 - Change settings to have formatOnSave
