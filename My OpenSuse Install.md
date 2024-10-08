@@ -64,7 +64,13 @@ firewall-cmd --get-zones
 ```bash
 usermod -a -G libvirt <my-username>
 ```
-- Use default virtual network `192.168.122.x`
+If bridge br0 not added 
+```bash
+nmcli c show
+nmcli c add type bridge ifname br0 con-name br0
+nmcli c modify enp3s0 master br0
+```
+- Use default virtual network `192.168.122.x`  
 - Adjust Firewall to access local Samba Server
 ```bash
 firewall-cmd --get-zones
