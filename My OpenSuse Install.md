@@ -64,11 +64,12 @@ firewall-cmd --get-zones
 ```bash
 usermod -a -G libvirt <my-username>
 ```
-If bridge br0 not added 
+If bridge br0 not added (see https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/configuring-a-network-bridge_configuring-and-managing-networking#configuring-a-network-bridge-by-using-nmcli_configuring-a-network-bridge)
 ```bash
 nmcli c show
 nmcli c add type bridge ifname br0 con-name br0
 nmcli c modify enp3s0 master br0
+nmcli c modify bridge0 connection.autoconnect-slaves 1
 ```
 - Use default virtual network `192.168.122.x`  
 - Adjust Firewall to access local Samba Server
