@@ -11,6 +11,7 @@
 ```bash
 alias r='npm run' 
 alias ll='ls -lh'
+alias dir='eza -lh --octal-permissions'
 alias df='df -h'
 alias cls='clear'
 ```
