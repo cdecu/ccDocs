@@ -5,23 +5,7 @@
 - Use KDE with packages selections 
   - fortune, gimp, nmap, glances, krita, ... 
   - Google Noto, Jetbrains, Fira, Microsofts Fonts, .... see also https://www.programmingfonts.org/
-
-## Bash Tweaking
-- Add to bash aliases `vi ~/.alias`
-```bash
-alias r='npm run' 
-alias ll='ls -lh'
-alias dir='eza -lh --octal-permissions'
-alias df='df -h'
-alias cls='clear'
-```
-- Customize bash history [Tuto](https://www.cherryservers.com/blog/a-complete-guide-to-linux-bash-history)
-Add to .bashrc
-```bash
-export HISTCONTROL=ignoreboth:erasedups
-export HISTIGNORE='clear':'ls *':'ll*':'history*':'exit':'reboot':'zypper*':'..':'cd ~'
-```
-
+- Download and Install Chrome, Visual Studio Code, Spotify, ...
 
 ## Install NodeJS
 - Download latest source  `configure ; make`
@@ -40,32 +24,30 @@ npm config set init-author-email carlos@decumont.be
 npm completion >> ~/.bashrc
 ```
 
-## Customize git
+## Install and Customize git
 ```bash
+sudo zypper in git
 git config --global user.name  'Carlos de Cumont'
 git config --global user.email 'carlos@decumont.be'
 ```
 
-## Start and Customize Samba
+## Install and Customize Samba
 As I use samba to share folders between all Windows VMs, I need to add all the windows users ...
 ```bash
 smbpasswd -a cdc 
 ```
 
-## Customize FirewallD
+## FirewallD
 Just using the default install !
 ```bash
 firewall-cmd --get-zones
+systemctl restart firewalld
 ```
-
 
 # KVM/QEMU Install
 - Install with `yast` ! Bridge br0 will be added.
   Sometime it can be buggy with KNetWorkManager so use Wicker
-```bash
-usermod -a -G libvirt <my-username>
-```
-If bridge br0 not added (see https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/configuring-a-network-bridge_configuring-and-managing-networking#configuring-a-network-bridge-by-using-nmcli_configuring-a-network-bridge)
+If bridge br0 not added ( see [configure netw bridge](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/configuring-a-network-bridge_configuring-and-managing-networking#configuring-a-network-bridge-by-using-nmcli_configuring-a-network-bridge) )
 ```bash
 nmcli c show
 nmcli c add type bridge ifname br0 con-name br0
@@ -81,6 +63,10 @@ firewall-cmd --zone=libvirt --list-services
 firewall-cmd --zone=libvirt --permanent --add-interface virbr0
 firewall-cmd --zone=libvirt --permanent --add-service samba 
 systemctl restart firewalld
+```
+- adjust permission 
+```bash
+usermod -a -G libvirt <my-username>
 ```
 - From time to time compress qcow2 files
 ```bash
@@ -111,14 +97,26 @@ usermod -a -G docker <my-username>
 - [du](https://github.com/bootandy/dust)  `sudo zypper in dust`
 - [diff](https://github.com/dandavison/delta)  `sudo zypper in git-delta`
 - [ls](https://github.com/eza-community/eza)  `sudo zypper in eza`
-- [top](https://github.com/ClementTsang/bottom)  `sudo zypper in bottom`
+- [top](https://github.com/ClementTsang/bottom)  `sudo zypper in bottom` `btm`
 - [cat](https://github.com/sharkdp/bat)  `sudo zypper in bat` 
 
-Add to bash aliases `vi ~/.alias`
-```
+## Bash Tweaking
+- Add to bash aliases `vi ~/.alias`
+```bash
+alias r='npm run' 
+alias ll='ls -lh'
+alias dir='eza -lh --octal-permissions'
+alias df='df -h'
+alias cls='clear'
 alias find='fd'
-
 ```
+- Customize bash history [Tuto](https://www.cherryservers.com/blog/a-complete-guide-to-linux-bash-history)
+  Add to .bashrc
+```bash
+export HISTCONTROL=ignoreboth:erasedups
+export HISTIGNORE='clear':'ls *':'ll*':'history*':'exit':'reboot':'zypper*':'..':'cd ~'
+```
+
 
 # Add Python Alternatives
 ```bash
