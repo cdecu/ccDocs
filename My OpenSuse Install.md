@@ -132,32 +132,11 @@ sudo update-alternatives --install
 sudo update-alternatives --config java
 ```
 
-
-
-dsffd
-fdsfds
-fdsf
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Install Visual Studio Code [see](https://linuxiac.com/how-to-install-vs-code-on-opensuse-leap-tumbleweed/)
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo zypper addrepo https://packages.microsoft.com/yumrepos/vscode vscode
+sudo zypper refresh
+sudo zypper install code
+code 
+```
