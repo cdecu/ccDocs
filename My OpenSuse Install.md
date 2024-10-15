@@ -7,6 +7,19 @@
   - Google Noto, Jetbrains, Fira, Microsofts Fonts, .... see also https://www.programmingfonts.org/
 - Download and Install Chrome, Visual Studio Code, Spotify, ...
 
+
+## Tweek Swap, ....
+```bash
+# we dont want to swap much if at all possible
+echo 1 > /proc/sys/vm/swappiness
+# hopefully better multitasking I/O performance
+echo 20 > /proc/sys/vm/dirty_ratio
+# Try to keep at least 100MB of free RAM at all times
+echo 100000 > /proc/sys/vm/min_free_kbytes
+# Default 100 - try more aggressively to reclaim inodes, etc from cache
+echo 160 > /proc/sys/vm/vfs_cache_pressure
+```
+
 ## Install NodeJS
 - Download latest source  `configure ; make`
 - Install in a root console (ctrl+alt+F1) `make install`
