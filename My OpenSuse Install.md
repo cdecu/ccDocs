@@ -6,6 +6,10 @@
   - fortune, gimp, nmap, glances, krita, ... 
   - Google Noto, Jetbrains, Fira, Microsofts Fonts, .... see also https://www.programmingfonts.org/
 - Download and Install Chrome, Visual Studio Code, Spotify, ...
+```
+https://dl.google.com/linux/chrome/rpm/stable/x86_64
+https://packages.microsoft.com/yumrepos/vscode
+```
 
 
 ## Tweek Swap, ....
@@ -58,6 +62,7 @@ systemctl restart firewalld
 ```
 
 # KVM/QEMU Install
+- Read [Virtual networking](https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-xen-network.html)  !!! Ensure that IP forwarding is enabled !!! 
 - Install with `yast` ! Bridge br0 will be added.
   Sometime it can be buggy with KNetWorkManager so use Wicker
 If bridge br0 not added ( see [configure netw bridge](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/configuring-a-network-bridge_configuring-and-managing-networking#configuring-a-network-bridge-by-using-nmcli_configuring-a-network-bridge) )
@@ -80,7 +85,7 @@ systemctl restart firewalld
 ```
 - adjust permission 
 ```bash
-usermod -a -G libvirt <my-username>
+usermod -a -G libvirt cdc
 ```
 - From time to time compress qcow2 files
 ```bash
@@ -96,7 +101,7 @@ rm Codotra.qcow2.old
 zypper in docker
 systemctl start docker
 systemctl enable docker
-usermod -a -G docker <my-username>
+usermod -a -G docker cdc
 ```
 - see also 
   - https://en.opensuse.org/User:Tsu2/docker-enter
