@@ -31,6 +31,7 @@ cargo watch -q -c -w src/ -x 'run -q'
 - [anyhow](https://github.com/dtolnay/anyhow)
 - [tokio](https://tokio.rs/)  
 > see also [blessed](https://blessed.rs/crates)
+- [rustubble - Beautifull components for your terminal.](https://github.com/warpy-ai/rustubble)
 
 # Rust Pattern
 - Type state
