@@ -7,9 +7,10 @@
   - Google Noto, Jetbrains, Fira, Microsofts Fonts, .... see also https://www.programmingfonts.org/
 - Download and Install Chrome, Visual Studio Code, Spotify, ...
 ```
-https://dl.google.com/linux/chrome/rpm/stable/x86_64
-https://packages.microsoft.com/yumrepos/vscode
+zypper addrepo https://dl.google.com/linux/chrome/rpm/stable/x86_64 Google
+zypper addrepo https://packages.microsoft.com/yumrepos/vscode VSCode
 ```
+- read [Zypper](https://en.opensuse.org/images/1/17/Zypper-cheat-sheet-1.pdf)
 
 
 ## Tweek Swap, ....
@@ -158,4 +159,10 @@ sudo zypper addrepo https://packages.microsoft.com/yumrepos/vscode vscode
 sudo zypper refresh
 sudo zypper install code
 code 
+```
+
+# Install JetBrains
+- Install needed libgthread if error msg `Unable to load native GTK libraries` 
+```bash
+sudo zypper install libgthread-2_0-0
 ```
