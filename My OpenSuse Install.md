@@ -145,6 +145,7 @@ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.11 3
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.12 4
 sudo update-alternatives --config python
 ```
+- install pipx as global env are locked 
 
 # Add JAVA Alternatives
 ```bash
@@ -166,3 +167,9 @@ code
 ```bash
 sudo zypper install libgthread-2_0-0
 ```
+
+# Alternatives
+```
+sudo update-alternatives --all
+```
+[google-chrome, 
