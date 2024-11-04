@@ -4,6 +4,7 @@
   - https://jimskapt.github.io/rust-book-fr/
   - https://github.com/rust-lang/rustlings/
   - https://practice.course.rs/ownership/ownership.html
+  - https://xorio.rs/
 
 
 ### Rust Basics
