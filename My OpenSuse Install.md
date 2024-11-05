@@ -173,3 +173,11 @@ sudo zypper install libgthread-2_0-0
 sudo update-alternatives --all
 ```
 [google-chrome, 
+
+
+## Tweek KDE
+- Theme Breeze Dark
+- Apps: Kalzium, Qalculate-qt, sl(ascii-art), ....
+- Meta+L https://github.com/EliverLara/AndromedaLauncher
+- Meta+1..9 KWin script : https://github.com/lucmos/UltrawideWindows/
+  
