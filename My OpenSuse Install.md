@@ -126,6 +126,7 @@ usermod -a -G docker cdc
 alias r='npm run' 
 alias ll='ls -lh'
 alias dir='eza -lh --octal-permissions'
+alias du='dust -D -d 1'
 alias df='df -h'
 alias cls='clear'
 alias find='fd'
