@@ -25,21 +25,24 @@ echo 100000 > /proc/sys/vm/min_free_kbytes
 echo 160 > /proc/sys/vm/vfs_cache_pressure
 ```
 
+
 ## Install NodeJS
-- Download latest source  `configure ; make`
-- Install in a root console (ctrl+alt+F1) `make install`
-- Use npm [custom global dir](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)
+- Install vim and create editor alternative 
 ```bash
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
-vi .profile  add export PATH=~/.npm-global/bin:$PATH
+sudo zypper install nano vim 
+sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim-nox11 50
+sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nano 40
+sudo update-alternatives --config editor
 ```
+> WARNING the real vim is `vim-nox11` all other are using the new `alts` router !
+
+## Install NodeJS
+- Just use `nvm` see [node](https://nodejs.org/en/download)
 - Customize some settings
 ```bash
 npm config set depth 0
 npm config set init-author-name 'Carlos de Cumont'
 npm config set init-author-email carlos@decumont.be
-npm completion >> ~/.bashrc
 ```
 
 ## Install and Customize git
