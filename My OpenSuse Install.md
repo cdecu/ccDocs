@@ -25,17 +25,6 @@ echo 100000 > /proc/sys/vm/min_free_kbytes
 echo 160 > /proc/sys/vm/vfs_cache_pressure
 ```
 
-
-## Install NodeJS
-- Install vim and create editor alternative 
-```bash
-sudo zypper install nano vim 
-sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim-nox11 50
-sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nano 40
-sudo update-alternatives --config editor
-```
-> WARNING the real vim is `vim-nox11` all other are using the new `alts` router !
-
 ## Install NodeJS
 - Just use `nvm` see [node](https://nodejs.org/en/download)
 - Customize some settings
@@ -100,7 +89,7 @@ rm Codotra.qcow2.old
 ```
 
 # Docker install
-- Use yast and follown [Tuto](https://en.opensuse.org/User:Tsu2/docker-build-tutorial-1)
+- Use yast and follow [Tuto](https://en.opensuse.org/User:Tsu2/docker-build-tutorial-1)
 ```bash
 zypper in docker
 systemctl start docker
@@ -140,6 +129,16 @@ alias find='fd'
 export HISTCONTROL=ignoreboth:erasedups
 export HISTIGNORE='clear':'ls *':'ll*':'history*':'exit':'reboot':'zypper*':'..':'cd ~'
 ```
+
+## Configure console editor
+- Install vim and create editor alternative
+```bash
+sudo zypper install nano vim 
+sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim-nox11 50
+sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nano 40
+sudo update-alternatives --config editor
+```
+> WARNING the real vim is `vim-nox11` all other are using the new `alts` router !
 
 
 # Add Python Alternatives
@@ -185,3 +184,14 @@ sudo update-alternatives --all
 - Meta+L https://github.com/EliverLara/AndromedaLauncher
 - Meta+1..9 KWin script : https://github.com/lucmos/UltrawideWindows/
   
+- Klipper Syncro the 2 buffers !!!! 
+- Correct problem dbl click + dragging selection
+Add in ~/.config/kdeglobals
+```txt/toml
+[KDE]
+StartDragDist=12
+```
+
+## Tweek Firefox
+- Correct problem dbl click + dragging selection:  
+  Dans `about:config` mettre `layout.word_select.eat_space_to_next_word` à false 
