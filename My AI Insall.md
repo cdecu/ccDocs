@@ -96,6 +96,7 @@ docker run -d -p 3000:8080 -v open-webui:/app/backend/data:Z  \
    2 │ Environment="OLLAMA_MODELS=/Data/Ollama/Models"
    3 │ Environment="OLLAMA_HOST=0.0.0.0"
    4 │ Environment="ROCR_VISIBLE_DEVICES=GPU-a2302affc7237da7"
+   +   Environment="OLLAMA_CONTEXT_LENGTH=32768"
 ─────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ```
 
@@ -108,4 +109,14 @@ Environment="OLLAMA_MODELS=/nouveau/chemin"
 ```  
 - To update, just rerun `curl -fsSL https://ollama.com/install.sh | sh`
 
+
+## Hermes install
+- WARNING 
+En backend local, l’agent exécute des commandes directement sur votre machine avec vos droits. 
+Si vous le reliez à un bot Telegram, Discord ou autre, toute personne autorisée à écrire au bot peut indirectement lui faire exécuter des commandes chez vous.
+- hermes setup
+
   
+
+
+
